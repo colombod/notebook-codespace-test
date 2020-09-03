@@ -1,0 +1,35 @@
+#!markdown
+
+# Using the Phonetic Speller library
+
+First you need to download the [Phonetic.Speller](https://www.nuget.org/packages/Phonetic.Speller/1.3.0) package from NuGet.
+
+#!csharp
+
+#r "nuget:Phonetic.Speller,1.3.0"
+
+#!markdown
+
+Then create a new instance of the ``PhoneticSpeller`` class:
+
+#!csharp
+
+using Phonetic.Speller;
+
+var speller = new PhoneticSpeller();
+
+#!markdown
+
+Then you can use the ``GetSpelling(string [] args)`` method to get the spelling of one or more words:
+
+#!csharp
+
+var spelling = speller.GetSpelling("Hello", "World");
+
+#!markdown
+
+Finally, print out the results:
+
+#!csharp
+
+display(spelling)
